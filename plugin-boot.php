@@ -9,21 +9,52 @@
  * License: GPL v2 or later
  * Text Domain: plugin-boot
  */
-
-/*
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-*/
-
 defined( 'ABSPATH' ) or die( 'You can\'t access this file' );
+
+/**
+ * Define Plugin PATH and URL
+ */
+define('PB_PLUGIN_PATH', plugin_dir_path(__FILE__));
+define('PB_PLUGIN_URL', plugin_dir_url(__FILE__));
+
+/**
+ * Require Dependencies
+ */
+require_once PB_PLUGIN_PATH . '/inc/settings.php';
+require_once PB_PLUGIN_PATH . '/inc/template-tags.php';
+require_once PB_PLUGIN_PATH . '/inc/hooks.php';
+
+/**
+ * Hooks And Filters
+ */
+add_action('init', 'plugin_boot_init');
+add_action('admin_menu', 'plugin_boot_add_option_page');
+register_activation_hook(__FILE__, 'plugin_boot_activation_hook');
+register_deactivation_hook(__FILE__, 'plugin_boot_deactivation_hook');
+
+/**
+ * Register Plugin Scripts and Styles
+ */
+add_action( 'wp_enqueue_scripts', 'plugin_boot_register_assets' );
+add_action( 'admin_enqueue_scripts', 'plugin_boot_register_admin_assets' );
+
+/**
+ * Methods
+ */
+/** Activation */
+function plugin_boot_activation_hook() {}
+
+/** Deactivation */
+function plugin_boot_deactivation_hook() {}
+
+/** Plugin Init */
+function plugin_boot_init() {}
+
+/** Admin Option Page */
+function plugin_boot_add_option_page() {}
+
+/** Register Assets */
+function plugin_boot_register_assets() {}
+
+/** Register Admin Assets */
+function plugin_boot_register_admin_assets() {}
