@@ -1,0 +1,21 @@
+{
+    "name": "supergiulab/plugin-boot",
+    "description": "Starter Wordpress Plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "SuPerGiu LAB",
+            "email": "me@supergiulab.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "mustache/mustache": "~2.5"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Inc\\" : "./inc"
+        }
+    }
+}
