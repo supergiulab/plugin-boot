@@ -20,8 +20,6 @@ use Inc\SetupPlugin;
 
 $plugin = new SetupPlugin();
 
-/**
- * Define Plugin PATH and URL
- */
-// define('PB_PLUGIN_PATH', plugin_dir_path(__FILE__));
-// define('PB_PLUGIN_URL', plugin_dir_url(__FILE__));
+// Activation and Deactivation Hooks
+register_activation_hook(__FILE__, array($plugin, 'activation_hook'));
+register_deactivation_hook(__FILE__, array($plugin, 'deactivation_hook'));

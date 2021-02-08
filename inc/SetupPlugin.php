@@ -16,8 +16,6 @@ class SetupPlugin {
          */
         add_action('init', array($this, 'init'));
         add_action('admin_menu', array($this, 'add_option_page'));
-        register_activation_hook(__FILE__, array($this, 'activation_hook'));
-        register_deactivation_hook(__FILE__, array($this, 'deactivation_hook'));
 
         /**
          * Register Plugin Scripts and Styles
@@ -27,20 +25,30 @@ class SetupPlugin {
     }
 
     /** Activation */
-    public function activation_hook() {}
+    public function activation_hook() {
+        // wp_die(var_dump("Plugin Activated"));
+    }
 
     /** Deactivation */
-    public function deactivation_hook() {}
+    public function deactivation_hook() {
+        // wp_die(var_dump("Plugin Deactivated"));
+    }
 
     /** Plugin Init */
-    public function init() {}
+    public function init() {
+        var_dump("Plugin Init");
+    }
 
     /** Admin Option Page */
     public function add_option_page() {}
 
     /** Register Assets */
-    public function register_assets() {}
+    public function register_assets() {
+        var_dump("Plugin Assets");
+    }
 
     /** Register Admin Assets */
-    public function register_admin_assets() {}
+    public function register_admin_assets() {
+        var_dump("Plugin Admin Assets");
+    }
 }
