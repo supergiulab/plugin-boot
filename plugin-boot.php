@@ -16,7 +16,7 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	Mustache_Autoloader::register();
 }
 
-// Define GLOBALS
+// Define Plugin Data
 $root    = plugin_dir_url(__FILE__);
 $version = get_file_data(__FILE__, array('Version'), 'plugin');
 
