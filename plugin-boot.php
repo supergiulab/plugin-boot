@@ -16,8 +16,13 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	Mustache_Autoloader::register();
 }
 
+// Define GLOBALS
+$root    = plugin_dir_url(__FILE__);
+$version = get_file_data(__FILE__, array('Version'), 'plugin');
+
+// Setup Plugin
 use Inc\SetupPlugin;
-$plugin = new SetupPlugin();
+$plugin = new SetupPlugin($dir, $data);
 
 // Activation and Deactivation Hooks
 register_activation_hook(__FILE__, array($plugin, 'activation_hook'));

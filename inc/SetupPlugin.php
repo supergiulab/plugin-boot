@@ -11,7 +11,13 @@ if( ! defined('ABSPATH') ) exit;
 
 class SetupPlugin {
 
-    public function __construct(){
+    private $root;
+    private $version;
+
+    public function __construct($root, $version){
+        $this->root    = $root;
+        $this->version = $version;
+
         /**
          * Hooks And Filters
          */
