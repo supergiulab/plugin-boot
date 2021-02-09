@@ -10,12 +10,13 @@ namespace Inc;
 if( ! defined('ABSPATH') ) exit;
 
 class SetupPlugin {
-    public function __constructor(){
+
+    public function __construct(){
         /**
          * Hooks And Filters
          */
-        add_action('init', array($this, 'init'));
-        add_action('admin_menu', array($this, 'add_option_page'));
+        add_action( 'init', array($this, 'init') );
+        add_action( 'admin_menu', array($this, 'add_option_page') );
 
         /**
          * Register Plugin Scripts and Styles
@@ -36,7 +37,7 @@ class SetupPlugin {
 
     /** Plugin Init */
     public function init() {
-        var_dump("Plugin Init");
+        // var_dump("Plugin Init");
     }
 
     /** Admin Option Page */
@@ -44,11 +45,11 @@ class SetupPlugin {
 
     /** Register Assets */
     public function register_assets() {
-        var_dump("Plugin Assets");
+        // var_dump("Plugin Assets");
     }
 
     /** Register Admin Assets */
     public function register_admin_assets() {
-        var_dump("Plugin Admin Assets");
+        // var_dump("Plugin Admin Assets");
     }
 }

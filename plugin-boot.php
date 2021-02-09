@@ -17,7 +17,6 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 }
 
 use Inc\SetupPlugin;
-
 $plugin = new SetupPlugin();
 
 // Activation and Deactivation Hooks
