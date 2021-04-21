@@ -22,7 +22,7 @@ $version = get_file_data(__FILE__, array('Version'), 'plugin');
 
 // Setup Plugin
 use Inc\SetupPlugin;
-$plugin = new SetupPlugin($dir, $data);
+$plugin = new SetupPlugin($root, $version);
 
 // Activation and Deactivation Hooks
 register_activation_hook(__FILE__, array($plugin, 'activation_hook'));
