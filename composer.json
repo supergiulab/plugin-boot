@@ -10,9 +10,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "mustache/mustache": "~2.5"
-    },
     "autoload" : {
         "psr-4" : {
             "Inc\\" : "./inc"
