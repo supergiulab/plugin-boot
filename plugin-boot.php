@@ -21,7 +21,7 @@ $root    = plugin_dir_url(__FILE__);
 $version = get_file_data(__FILE__, array('Version'), 'plugin');
 
 // Setup Plugin
-use Inc\SetupPlugin;
+use SupergiuLab\SetupPlugin;
 $plugin = new SetupPlugin($path, $root, $version);
 
 // Activation and Deactivation Hooks

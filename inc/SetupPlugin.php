@@ -4,7 +4,7 @@
  * 
  * @package plugin-boot
  */
-namespace Inc;
+namespace SupergiuLab;
 
 /** Don't load directly */
 if( ! defined('ABSPATH') ) exit;
