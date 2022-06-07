@@ -16,12 +16,13 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 }
 
 // Define Plugin Data
+$path    = plugin_dir_path(__FILE__);
 $root    = plugin_dir_url(__FILE__);
 $version = get_file_data(__FILE__, array('Version'), 'plugin');
 
 // Setup Plugin
 use Inc\SetupPlugin;
-$plugin = new SetupPlugin($root, $version);
+$plugin = new SetupPlugin($path, $root, $version);
 
 // Activation and Deactivation Hooks
 register_activation_hook(__FILE__, array($plugin, 'activation_hook'));
