@@ -2,10 +2,10 @@ const path = require('path'),
 	  settings = require('./settings');
 
 module.exports = {
-	entry: settings.themeLocation + "/admin/js/app.js",
+	entry: settings.pluginLocation + "/admin/js/app.js",
 
 	output: {
-		path: settings.themeLocation + "/admin",
+		path: settings.pluginLocation + "/public/admin",
 		filename: "app.min.js"
 	},
 	module: {
@@ -22,5 +22,5 @@ module.exports = {
 		}
 		]
 	},
-	mode: 'development'
+	mode: 'development' // production
 }

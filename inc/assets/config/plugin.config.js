@@ -39,5 +39,5 @@ module.exports = {
 			'waypoints' : 'waypoints/lib/jquery.waypoints.min.js'
 		}
 	},
-	mode: 'development'
+	mode: 'development' // production
 }
