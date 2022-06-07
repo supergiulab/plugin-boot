@@ -32,12 +32,12 @@ module.exports = {
 	resolve: {
 		modules: ['node_modules'],
 		alias: {
-			'jquery.min' : 'jquery/dist/jquery.min.js',
 			'bootstrap.min' : 'bootstrap/dist/js/bootstrap.min.js',
 			'owl' : 'owl.carousel/dist/owl.carousel.min.js',
 			'masonry-layout' : 'masonry-layout/dist/masonry.pkgd.min.js',
 			'waypoints' : 'waypoints/lib/jquery.waypoints.min.js'
 		}
 	},
-	mode: 'development' // production
+	mode: 'production'
+	//mode: 'development'
 }

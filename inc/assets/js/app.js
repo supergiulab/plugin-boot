@@ -1,15 +1,19 @@
 /**!
  * App.js
  */
-// jQuery
-import $ from 'jquery';
+ "use strict";
 
-export default class App {
+// Waypoint
+// import 'waypoints'
+// Owl Carousel
+// import "owl.carousel";
+// Masonry
+// import Masonry from "masonry-layout";
+// Bootstrap
+//import 'bootstrap.min';
+// Fancybox
+// import "@fancyapps/fancybox";
 
-	constructor() {
-		const _self = this;
-	}
-
-}
-
-new App();
+// UI Behave
+import Ui from './mod/Ui';
+const ui = new Ui();
