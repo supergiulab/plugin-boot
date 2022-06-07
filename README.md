@@ -5,6 +5,6 @@ To create your own plugin just do the following:
 
 1) Rename the plugin folder with your **unique** plugin slug
 2) Rename plugin-boot.php with your plugin slug and fix reference in index.php
-3) Rename the SetupPlugin file and PHP class and fix reference in main plugin file
+3) Set your namespace and run `composer dumpautoload`
 
-Good luck and remember that Code is Poetry
+Code is Poetry
